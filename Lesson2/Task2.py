@@ -3,15 +3,8 @@
 # - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
 
-def fill(a):
-    if a == 1:
-        return 1
-    else:
-        return a * fill(a-1)
-
-
-def nabor(elem):
-    result = []
-    for i in range(1, elem):
-        result.append(fill(i))
-    print(result)
+n = int(input('Введите число N:'))
+f = 1
+for i in range(1, n + 1):
+f *= i
+print(f, end = ' ')
