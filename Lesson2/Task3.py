@@ -3,11 +3,6 @@
 # - Для n = 6: [2.0, 2.25, 2.37037037037037, 2.44140625, 2.4883199999999994, 2.5216263717421135]
 
 
-def list(n):
-    result23 = []
-    sum = 0
-    for i in range(0, n):
-        result23.append((1+1/(i+1))**(i+1))
-        sum += result[i-1]
-    print(result)
-    print(f"Сумма последовательности равна: {sum}")
+n = int(input('Введите число N:'))
+pos = [round((1+1/i)**i, 2) for i in range(1, n + 1)]
+print(f'Последовательность:{pos}\nСумма чисел: {round(sum(pos), 2)}')
