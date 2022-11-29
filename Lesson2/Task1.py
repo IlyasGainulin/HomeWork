@@ -3,15 +3,9 @@
 # - 6782 -> 23
 # - 0,56 -> 11
 
-import random
-
-
-def sumElem(elem):
-    result = 0
-    massElem = str(elem)
-    for i in range(len(massElem)):
-        if massElem[i] != ",":
-            result += int(massElem[i])
-        else:
-            continue
-    print(result)
+n = input('Введите число N: ')
+sum = 0
+for i in n:
+    if i != ',' and i != '.':
+        sum += int(i) 
+print(sum)
